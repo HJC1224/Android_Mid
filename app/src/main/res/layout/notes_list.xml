@@ -6,6 +6,9 @@
     android:orientation="vertical"
     android:background="@color/light_white">
 
+    <!-- 引入搜索栏布局（search_bar.xml） -->
+    <include layout="@layout/search_bar" />
+
     <!-- 分类选择栏 -->
     <LinearLayout
         android:id="@+id/category_bar"
@@ -30,9 +33,6 @@
             android:src="@android:drawable/arrow_down_float"
             android:layout_marginLeft="2dp"/>
     </LinearLayout>
-
-    <!-- 引入搜索栏布局（search_bar.xml） -->
-    <include layout="@layout/search_bar" />
 
     <!-- 笔记列表（ListView） -->
     <ListView
