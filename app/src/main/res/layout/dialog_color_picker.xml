@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/dialog_bg"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <!-- 标题行 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_change_bg"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- 颜色方块行 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp">
+
+        <!-- 白色方块（添加marginRight和contentDescription） -->
+        <View
+            android:id="@+id/color_white"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/color_block_white"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginRight="15dp"
+            android:contentDescription="@string/color_white_desc"/>
+
+        <!-- 绿色方块 -->
+        <View
+            android:id="@+id/color_green"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/color_block_green"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginRight="15dp"
+            android:contentDescription="@string/color_green_desc"/>
+
+        <!-- 蓝色方块 -->
+        <View
+            android:id="@+id/color_blue"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/color_block_blue"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginRight="15dp"
+            android:contentDescription="@string/color_blue_desc"/>
+
+        <!-- 黄色方块 -->
+        <View
+            android:id="@+id/color_yellow"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/color_block_yellow"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginRight="15dp"
+            android:contentDescription="@string/color_yellow_desc"/>
+
+        <!-- 粉色方块 -->
+        <View
+            android:id="@+id/color_pink"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/color_block_pink"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="@string/color_pink_desc"/>
+
+    </LinearLayout>
+
+    <!-- 颜色文本行（与方块行间距匹配） -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <!-- 白色文本（与方块margin匹配，添加左侧margin微调） -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/color_white"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginRight="15dp"/>
+
+        <!-- 绿色文本 -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/color_green"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginRight="15dp"/>
+
+        <!-- 蓝色文本 -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/color_blue"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginRight="15dp"/>
+
+        <!-- 黄色文本 -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/color_yellow"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginRight="15dp"/>
+
+        <!-- 粉色文本 -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/color_pink"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

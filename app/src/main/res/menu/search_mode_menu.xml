@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_real_time_search"
+        android:title="@string/search_mode_real_time" />
+    <item
+        android:id="@+id/menu_click_search"
+        android:title="@string/search_mode_click" />
+</menu>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 1. 大矩形（主体） -->
+    <item
+        android:top="30dp"> <!-- 向下偏移30dp，让小矩形显示在上方 -->
+        <shape android:shape="rectangle">
+            <corners
+                android:topRightRadius="10dp"
+                android:bottomLeftRadius="10dp"
+                android:bottomRightRadius="10dp"/>
+            <solid android:color="#bde6ec"/> <!-- 主体色 -->
+        </shape>
+    </item>
+
+    <!-- 2. 小矩形：显示在大矩形上方 -->
+    <item
+        android:width="80dp"
+        android:height="30dp"
+        android:top="0dp"
+        android:left="0dp">
+    <shape android:shape="rectangle">
+        <corners
+            android:topLeftRadius="10dp"
+            android:topRightRadius="10dp"/>
+        <solid android:color="#bde6ec"/>
+    </shape>
+</item>
+    </layer-list>

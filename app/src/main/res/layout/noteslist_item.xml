@@ -1,25 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2010 The Android Open Source Project
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-  
-          http://www.apache.org/licenses/LICENSE-2.0
-  
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
-
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@android:id/text1"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/NoteCardStyle"
     android:layout_width="match_parent"
-    android:layout_height="?android:attr/listPreferredItemHeight"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:gravity="center_vertical"
-    android:paddingLeft="5dip"
-    android:singleLine="true"
-/>
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- 分类 -->
+    <TextView
+        android:id="@+id/category_label"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="-12dp"
+        android:layout_marginTop="-12dp"
+        android:background="@null"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:text="默认"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <!-- 第一行：标题 -->
+    <TextView
+        android:id="@android:id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="10dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <!-- 第二行：正文第一行（始终保留） -->
+    <TextView
+        android:id="@+id/content_line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@android:id/text1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        android:textColor="#000000"/>
+
+    <!-- 第三行：正文第二行（始终保留） -->
+    <TextView
+        android:id="@+id/content_line2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_line1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        android:textColor="#000000"/>
+
+    <!-- 第四行：正文第三行（始终保留） -->
+    <TextView
+        android:id="@+id/content_line3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_line2"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        android:textColor="#000000"/>
+
+    <!-- 第五行：正文省略号（始终保留位置） -->
+    <TextView
+        android:id="@+id/content_ellipsis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_line3"
+        android:layout_marginLeft="5dp"
+        android:text="..."
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:visibility="invisible"/>
+
+    <!-- 第六行：搜索位置信息（固定位置） -->
+    <TextView
+        android:id="@+id/text_search_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_ellipsis"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="100dp"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:visibility="gone"/>
+
+    <!-- 第七行：搜索词及上下文（固定位置） -->
+    <TextView
+        android:id="@+id/text_content_match"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_search_location"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="100dp"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:visibility="gone"/>
+
+    <!-- 时间区域（右下角） -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="0dp">
+
+        <!-- 创建时间 -->
+        <TextView
+            android:id="@+id/text_create_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#000000"/>
+
+        <!-- 修改时间 -->
+        <TextView
+            android:id="@+id/text_modify_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+</RelativeLayout>

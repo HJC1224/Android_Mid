@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@android:color/darker_gray"
+    android:visibility="gone">  <!-- 初始隐藏 -->
+
+    <EditText
+        android:id="@+id/search_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:hint="@string/search_hint"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="text"
+        android:textColor="@color/search_text_color"
+        android:textColorHint="@color/search_hint_color"
+        />
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_button"
+        android:layout_marginRight="4dp"
+        android:backgroundTint="#3088DE" />  <!-- 深蓝色 -->
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:backgroundTint="#9B3434" />  <!-- 棕红色 -->
+
+</LinearLayout>

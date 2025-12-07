@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 搜索框输入文字颜色（黑色，与深灰背景对比） -->
+    <color name="search_text_color">#000000</color>
+    <!-- 搜索框提示文字颜色（浅灰色，与白色背景对比） -->
+    <color name="search_hint_color">#CCCCCC</color>
+
+    <color name="note_content_color">#333333</color>
+
+    <color name="light_white">#FFFFFF</color>
+    <color name="light_green">#E6F4EA</color>
+    <color name="light_blue">#E6EEF4</color>
+    <color name="light_yellow">#F4F3E6</color>
+    <color name="light_pink">#F4E6EB</color>
+    <color name="dialog_bg">#EEEEEE</color> <!-- 悬浮窗背景 -->
+</resources>
